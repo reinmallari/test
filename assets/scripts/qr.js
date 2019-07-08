@@ -1,4 +1,5 @@
 function openQRCamera(node) {
+	console.log("fasfsf");
   var reader = new FileReader();
   reader.onload = function() {
     node.value = "";
