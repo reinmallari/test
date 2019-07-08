@@ -11,6 +11,7 @@ function openQRCamera(node) {
       }
     };
     qrcode.decode(reader.result);
+    console.log(reader.result);
   };
   reader.readAsDataURL(node.files[0]);
  }
