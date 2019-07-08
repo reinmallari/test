@@ -12,4 +12,4 @@ function openQRCamera(node) {
     qrcode.decode(reader.result);
   };
   reader.readAsDataURL(node.files[0]);
-}
+ }
