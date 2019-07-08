@@ -14,5 +14,18 @@ function openQRCamera(node) {
     qrcode.decode(reader.result);
   };
   reader.readAsDataURL(node.files[0]);
-  console.log("2:"+ node.files[0]);
+  //Passing Data
+	  $.ajax({
+		  url: base_url + "batch/edit_batch/",
+		  type: "POST",
+		  dataType: "JSON",
+		  success: function(data) {
+			  console.log("Success");
+
+			    console.log("2:"+ node.files[0]);
+		  },
+		  error: function(jqXHR, textStatus, errorThrown) {
+			  alert('Error get data from ajax');
+		  }
+	  });
  }
