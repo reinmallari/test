@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/qr_css.css')?>">
-	<script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+	<script src="<?php echo base_url('assets/lib/qr_lib.js')?>"></script>
 	<script src="<?php echo base_url('assets/scripts/qr.js')?>"></script>
 </head>
 <body>
