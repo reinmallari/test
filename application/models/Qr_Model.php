@@ -10,13 +10,20 @@ class Qr_Model extends CI_Model {
     {
       parent::__construct();
       $this->load->database();
+	 $this->default = $this->load->database('default',TRUE);
     }
 
     public function qr_add($data)
     {
-      $this->db->insert($this->table, $data);
-      return $this->db->insert_id();
+	 $this->default->select('*');
+	 $this->default->from('employees');
+	 $this->default->where('employee_no',$data);
+	 $query = $this->default->get();
+		if($query->num_rows() > 0){
+			$this->db->insert($this->table, $data);
+			return $this->db->insert_id();
+		}else  {
+		    return false;
+		}
     }
-
-
 }

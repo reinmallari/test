@@ -12,7 +12,6 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-
 	public function qr_add(){
 	    $qr = $this->input->post('qr_url');
 	    $decoded_qr = base64_decode($qr);
