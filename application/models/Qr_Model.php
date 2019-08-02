@@ -13,11 +13,11 @@ class Qr_Model extends CI_Model {
 	 $this->default = $this->load->database('default',TRUE);
     }
 
-    public function qr_add($data)
+    public function qr_add($data,$decoded_qr)
     {
 	 $this->default->select('*');
 	 $this->default->from('employees');
-	 $this->default->where('employee_no',$data);
+	 $this->default->where('employee_no',$decoded_qr);
 	 $query = $this->default->get();
 		if($query->num_rows() > 0){
 			$this->db->insert($this->table, $data);

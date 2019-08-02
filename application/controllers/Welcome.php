@@ -18,7 +18,7 @@ class Welcome extends CI_Controller {
 	    $data = array(
 	      'qr_url'=>$decoded_qr,
 	    );
-	  $insert = $this->Qr_Model->qr_add($data);
+	  $insert = $this->Qr_Model->qr_add($data,$decoded_qr);
 	  echo json_encode(array("status" => TRUE,"qr"=>$qr));
 	}
 }
