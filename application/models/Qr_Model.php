@@ -10,7 +10,7 @@ class Qr_Model extends CI_Model {
     {
       parent::__construct();
       $this->load->database();
-	 $this->default = $this->load->database('default',TRUE);
+	 $this->default = $this->load->database('db2',TRUE);
     }
 
     public function qr_add($data,$decoded_qr)
