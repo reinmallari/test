@@ -21,7 +21,8 @@ class Qr_Model extends CI_Model {
 	 $query = $this->default->get();
 		if($query->num_rows() > 0){
 			$this->db->insert($this->table, $data);
-			return $this->db->insert_id();
+			$this->db->insert_id();
+			return true;
 		}else  {
 		    return false;
 		}
